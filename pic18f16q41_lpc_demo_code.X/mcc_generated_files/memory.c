@@ -17,8 +17,8 @@
         Device            :  PIC18F16Q41
         Driver Version    :  1.1.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.10 and above
-        MPLAB             :  MPLAB X 5.35
+        Compiler          :  XC8 2.20 and above
+        MPLAB             :  MPLAB X 5.40
 */
 
 /*
