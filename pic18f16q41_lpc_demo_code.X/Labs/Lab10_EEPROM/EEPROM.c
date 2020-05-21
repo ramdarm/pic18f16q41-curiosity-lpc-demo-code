@@ -68,6 +68,9 @@ void EEPROM(void) {
         //Get the top 4 MSBs of the ADC and write them to EEPROM
         adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 12;
         DATAEE_WriteByte(EEAddr, adcResult);
+        
+        //Printing ADC result on Serial port
+        printf("ADC Result: %d\n\r", ADRES >> 4);
 
         //Load whatever is in EEPROM to the LED Display
         ledDisplay = DATAEE_ReadByte(EEAddr);
