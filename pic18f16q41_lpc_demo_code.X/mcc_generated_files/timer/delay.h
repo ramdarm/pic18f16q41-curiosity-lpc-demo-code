@@ -1,21 +1,11 @@
 /**
-  HelloWorld Lab Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    HelloWorld.c
-
-  Summary:
-    This is the source file for the Hello World lab
-
-  Description:
-    This source file contains the code on how the Hello World lab works.
- */
-
-/*
- (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
+\file
+\defgroup doc_driver_delay_code Delay Driver Source Code Reference
+\ingroup doc_driver_delay
+\brief This file contains the API to generate delays in the millisecond and microsecond ranges.
+\copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+\page License
+    (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
 
     THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
@@ -34,34 +24,14 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
- */
+*/
 
-/**
-  Section: Included Files
- */
+#ifndef _DELAY_H
+#define _DELAY_H
 
-#include "../../mcc_generated_files/system/system.h"
-#include "../../labs.h"
+#include <stdint.h>
 
-/*
-                             Application    
- */
+void DELAY_milliseconds(uint16_t milliseconds);
+void DELAY_microseconds(uint16_t microseconds);
 
-void HelloWorld(void) {
-    if (labState == NOT_RUNNING) {
-        LEDs_SetLow();
-
-        labState = RUNNING;
-    }
-
-    if (labState == RUNNING) {
-        LED_D4_SetHigh();
-    }
-
-    if (switchEvent) {
-        labState = NOT_RUNNING;
-    }
-}
-/**
- End of File
- */
+#endif	// _DELAY_H

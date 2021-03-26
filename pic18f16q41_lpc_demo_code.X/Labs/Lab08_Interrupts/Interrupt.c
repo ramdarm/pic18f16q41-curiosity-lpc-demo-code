@@ -40,7 +40,7 @@
   Section: Included Files
  */
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 /**
@@ -64,10 +64,11 @@ void Interrupt(void) {
         
         rotateReg = 1;
        
+        clearTimer0Interrupt();
         INTERRUPT_GlobalInterruptEnable();
         INTERRUPT_TMR0InterruptEnable();
         
-        TMR0_SetInterruptHandler(LAB_ISR);
+        Timer0_OverflowCallbackRegister(LAB_ISR);
  
         labState = RUNNING;
     }

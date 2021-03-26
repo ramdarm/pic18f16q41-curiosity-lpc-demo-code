@@ -39,7 +39,7 @@
   Section: Included Files
  */
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 /**
@@ -66,11 +66,11 @@ void EEPROM(void) {
     if (labState == RUNNING) {
         
         //Get the top 4 MSBs of the ADC and write them to EEPROM
-        adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 12;
+        adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 8;
         DATAEE_WriteByte(EEAddr, adcResult);
         
         //Printing ADC result on Serial port
-        printf("ADC Result: %d\n\r", ADRES >> 4);
+        printf("ADC Result: %d\n\r", ADRES);
 
         //Load whatever is in EEPROM to the LED Display
         ledDisplay = DATAEE_ReadByte(EEAddr);

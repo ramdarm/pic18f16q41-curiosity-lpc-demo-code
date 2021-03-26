@@ -40,7 +40,7 @@
   Section: Included Files
  */
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 /**
@@ -62,10 +62,10 @@ void ADC(void) {
 
     if (labState == RUNNING) {
         //Get the top 4 MSBs and display it on the LEDs
-        adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 12;
+        adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 8;
 
         //Printing ADC result on Serial port
-        printf("ADC Result: %d\n\r", ADRES >> 4);
+        printf("ADC Result: %d\n\r", ADRES);
 
         //Determine which LEDs will light up
         LED_D4_LAT = adcResult & 1;

@@ -1,21 +1,10 @@
 /**
-  HelloWorld Lab Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    HelloWorld.c
-
-  Summary:
-    This is the source file for the Hello World lab
-
-  Description:
-    This source file contains the code on how the Hello World lab works.
- */
-
-/*
- (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
+\file
+\addtogroup doc_driver_delay_code
+\brief This file contains the functions to generate delays in the millisecond and microsecond ranges.
+\copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+\page License
+    (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
 
     THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
@@ -34,34 +23,38 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
- */
+**/
+
+
+#include "../../system/config_bits.h"
+#include <xc.h>
+#include <stdint.h>
 
 /**
-  Section: Included Files
- */
-
-#include "../../mcc_generated_files/system/system.h"
-#include "../../labs.h"
-
-/*
-                             Application    
- */
-
-void HelloWorld(void) {
-    if (labState == NOT_RUNNING) {
-        LEDs_SetLow();
-
-        labState = RUNNING;
-    }
-
-    if (labState == RUNNING) {
-        LED_D4_SetHigh();
-    }
-
-    if (switchEvent) {
-        labState = NOT_RUNNING;
+*  \ingroup doc_driver_delay_code
+*  Call this function to delay execution of the program for a certain number of milliseconds
+@param milliseconds - number of milliseconds to delay
+*/
+void DELAY_milliseconds(uint16_t milliseconds) {
+    while(milliseconds--){ 
+        __delay_ms(1); 
     }
 }
+
 /**
- End of File
- */
+*  \ingroup doc_driver_delay_code
+*  Call this function to delay execution of the program for a certain number of microseconds
+@param microseconds - number of microseconds to delay
+*/
+void DELAY_microseconds(uint16_t microseconds) {
+    while( microseconds >= 32)
+    {
+        __delay_us(32);
+        microseconds -= 32;
+    }
+    
+    while(microseconds--)
+    {
+        __delay_us(1);
+    }
+}

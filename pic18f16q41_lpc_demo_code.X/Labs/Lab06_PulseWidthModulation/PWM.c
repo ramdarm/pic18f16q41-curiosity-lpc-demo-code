@@ -40,14 +40,12 @@
   Section: Included Files
  */
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 /**
   Section: Local Function Prototypes
  */
-void PWM_Output_D7_Enable(void);
-void PWM_Output_D7_Disable(void);
 
 /**
   Section: Local Variable Declarations
@@ -60,8 +58,10 @@ static uint16_t adcResult;
 void PWM(void) {
     if (labState == NOT_RUNNING) {
         LEDs_SetLow();
+        PWM1_16BIT_Enable();
+        
         PWM_Output_D7_Enable();
-        TMR2_StartTimer();
+        Timer2_Start();
 
         labState = RUNNING;
     }
@@ -75,22 +75,11 @@ void PWM(void) {
     }
 
     if (switchEvent) {
-        TMR2_StopTimer();
+        Timer2_Stop();
+        PWM1_16BIT_Disable();
         PWM_Output_D7_Disable();
         labState = NOT_RUNNING;
     }
-}
-
-void PWM_Output_D7_Enable(void) {
-   
-    // Set D7 as the output of PWM1 
-    RC5PPS = 0x0A;
-}
-
-void PWM_Output_D7_Disable(void) {
-   
-    // Restore D7 as a normal I/O pin
-    RC5PPS = 0x00;
 }
 /**
  End of File

@@ -40,7 +40,7 @@
   Section: Included Files
  */
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 
@@ -60,16 +60,16 @@ static uint8_t flagCounter = 0;
 void Blink(void) {
     if (labState == NOT_RUNNING) {
         LEDs_SetLow();
-        TMR1_StartTimer();
+        Timer1_Start();
 
         labState = RUNNING;
     }
 
     if (labState == RUNNING) {
       
-        while(!TMR1_HasOverflowOccured());   
-        TMR1IF = 0;  
-        TMR1_Reload();    
+        while(!hasTimer1Overflowed());   
+        clearTimer1Overflow();  
+        Timer1_Reload();
         flagCounter++;
 
         if (flagCounter == FLAG_COUNTER_MAX) {
@@ -79,7 +79,7 @@ void Blink(void) {
     }
 
     if (switchEvent) {
-        TMR1_StopTimer();
+        Timer1_Stop();
         labState = NOT_RUNNING;
     }
 }

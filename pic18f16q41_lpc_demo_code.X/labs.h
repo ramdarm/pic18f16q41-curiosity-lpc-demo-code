@@ -57,6 +57,20 @@
     #define INTERRUPT_TMR0InterruptEnable()         do { TMR0IE = 1; } while(0)
     #define INTERRUPT_TMR0InterruptDisable()        do { TMR0IE = 0; } while(0)
 
+    //Has the timer overflowed?
+    #define hasTimer1Overflowed() PIR3bits.TMR1IF 
+
+    //Clear the overflow flag in Timer 1
+    #define clearTimer1Overflow() do { PIR3bits.TMR1IF = 0;} while (0)
+
+    //Clear the overflow flag in Timer 0
+    #define clearTimer0Interrupt() do { PIR3bits.TMR0IF = 0; } while (0)
+
+    //Enable PWM Output for LED D7
+    #define PWM_Output_D7_Enable() do { RC5PPS = 0x0A; } while (0)
+
+    //Disable PWM Output for LED D7
+    #define PWM_Output_D7_Disable() do { RC5PPS = 0x00; } while (0)
 /**
   Section: Variable Definitions
  */
@@ -196,7 +210,7 @@ void PWM(void);
   @Param
     none
 */
-void Timer1(void);
+void Timer1_Lab(void);
 
 /**
   @Summary

@@ -42,13 +42,13 @@
 
 #include <pic18.h>
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 /**
   Section: Macro Declaration
  */
-#define WDT_Enable()        (WDTCON0bits.SWDTEN = 1)
+#define WDT_Enable()        ( WDTCON0bits.SWDTEN = 1)
 #define WDT_Disable()       (WDTCON0bits.SWDTEN = 0)
 
 /*
@@ -60,7 +60,7 @@ void SleepWakeUp(void) {
         LED_D4_LAT = LED_D6_LAT = HIGH;
         LED_D5_LAT = LED_D7_LAT = LOW;
         WDT_Enable();
-
+        
         SLEEP();
         NOP();
         NOP();

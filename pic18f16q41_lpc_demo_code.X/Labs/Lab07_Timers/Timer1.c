@@ -40,7 +40,7 @@
   Section: Included Files
  */
 
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/system/system.h"
 #include "../../labs.h"
 
 
@@ -49,10 +49,12 @@
  */
 static uint8_t rotateReg;
 
+
+
 /*
                              Application    
  */
-void Timer1(void) {
+void Timer1_Lab(void) {
     if (labState == NOT_RUNNING) {
         LEDs_SetLow();
         LED_D4_SetHigh();
@@ -60,15 +62,15 @@ void Timer1(void) {
         //Initialize temporary register to begin at 1
         rotateReg = 1;
 
-        TMR1_StartTimer();
+        Timer1_Start();
 
         labState = RUNNING;
     }
 
     if (labState == RUNNING) {
-        while(!TMR1_HasOverflowOccured());       
-        TMR1IF = 0;                
-        TMR1_Reload();
+        while(!hasTimer1Overflowed());       
+        clearTimer1Overflow();               
+        Timer1_Reload();
 
         rotateReg = rotateReg << 1;
 
@@ -86,7 +88,7 @@ void Timer1(void) {
     }
 
     if (switchEvent) {
-        TMR1_StopTimer();
+        Timer1_Stop();
         labState = NOT_RUNNING;
     }
 }
