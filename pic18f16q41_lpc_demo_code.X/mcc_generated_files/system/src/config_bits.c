@@ -60,11 +60,11 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
 #pragma config RSTOSC = HFINTOSC_64MHZ     // Power-up Default Value for COSC->HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1
 
 //CONFIG2
-#pragma config FCMENP = ON     // Fail-Safe Clock Monitor Enable - Primary XTAL Enable->Fail-Safe Clock Monitor enabled; timer will flag FSCMP bit and OSFIF interrupt on EXTOSC failure.
+#pragma config FCMENP = OFF     // Fail-Safe Clock Monitor Enable - Primary XTAL Enable->Fail-Safe Clock Monitor disabled
 #pragma config CLKOUTEN = OFF     // Clock Out Enable->CLKOUT function is disabled
-#pragma config FCMEN = ON     // Fail-Safe Clock Monitor Enable->Fail-Safe Clock Monitor enabled
+#pragma config FCMEN = OFF     // Fail-Safe Clock Monitor Enable->Fail-Safe Clock Monitor disabled
 #pragma config CSWEN = ON     // Clock Switch Enable->Writing to NOSC and NDIV is allowed
-#pragma config FCMENS = ON     // Fail-Safe Clock Monitor Enable - Secondary XTAL Enable->Fail-Safe Clock Monitor enabled; timer will flag FSCMP bit and OSFIF interrupt on SOSC failure.
+#pragma config FCMENS = OFF     // Fail-Safe Clock Monitor Enable - Secondary XTAL Enable->Fail-Safe Clock Monitor Disabled
 #pragma config PR1WAY = OFF     // PRLOCKED One-Way Set Enable->PRLOCKED bit can be set and cleared repeatedly
 
 //CONFIG3

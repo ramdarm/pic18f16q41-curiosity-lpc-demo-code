@@ -2,21 +2,21 @@
 
 # INTRODUCTION
 
-The following labs in this demo code project are designed for Microchip’s Curiosity Low Pin Count (LPC) Development board. This development board supports Microchip's 8, 14 and 20-pin 8-bit PIC® MCUs. This MPLAB X project contains several lab exercises that demonstrate a large number of basic capabilities of PIC® devices and can also be used to test the condition of the board. Each lab contains a brief description of the lab and discussions to make you become easily acquainted with the different peripherals and registers of PIC® MCUs. These labs also make use of the MPLAB Code Configurator (MCC), an easy-to-use plugin tool for MPLAB X IDE. MCC can be used to setup the peripherals and also generates drivers which can be used in the application code. All labs are written in C language and are compatible with the latest XC8 compilers.
+The following labs in this demo code project are designed for Microchip’s Curiosity Low Pin Count (LPC) Development board. This development board supports Microchip's 8, 14 and 20-pin 8-bit PIC® MCUs. This MPLAB® X IDE project contains several lab exercises that demonstrate a large number of basic capabilities of PIC devices and can also be used to test the condition of the board. Each lab contains a brief description of the lab and discussions to make you become easily acquainted with the different peripherals and registers of PIC MCUs. These labs also make use of the MPLAB Code Configurator (MCC), an easy-to-use plugin tool for MPLAB X IDE. MCC can be used to setup the peripherals and also generates drivers which can be used in the application code. All labs are written in C language and are compatible with the latest XC8 compilers.
 
 ##### Curiosity Low Pin Count (LPC) Development Board:
 ![Curiosity Low Pin Count (LPC) Development Board](images/LPC-board.PNG)
 
 ## Software Used
-  - MPLAB® X IDE 5.40 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-  - MPLAB® XC8 2.20 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-  - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-  - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-  - Microchip PIC18F-Q_DFP (1.5.124) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
+  - [MPLAB X IDE 5.45 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [MPLAB XC8 2.31 or a newer compiler](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [MPLAB Code Configurator (MCC) 4.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+    - Melody Library v1.37.18 or newer
+  - [PIC18F-Q_DFP (1.9.175) or newer](https://packs.download.microchip.com/)
 
 ## Hardware Used
-  - [PIC18F16Q41 Microcontroller](https://www.microchip.com/wwwproducts/en/PIC18F16Q41)
-  - [Curiosity Low Pin Count (LPC) Development Board - Rev4](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137)  
+  - [PIC18F16Q41 Microcontroller](https://www.microchip.com/wwwproducts/en/PIC18F16Q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [Curiosity Low Pin Count (LPC) Development Board - Rev 4](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)  
 
 ## LABS
 The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply pressing the S1 button on the board.
