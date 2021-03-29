@@ -65,10 +65,6 @@
             "ADCC","UART","WWDT","TMR1","PWM"
         ],
         "keywords": [
-            "Demo Code",
-            "Getting Started",
-            "Q41",
-            "PIC18-Q41",
             "Melody"
         ],
 		"additionalData": {
