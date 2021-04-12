@@ -97,9 +97,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     PPS registers
     */
-    U1RXPPS = 0xD; //RB5->UART1:RX1;
+    U1RXPPS = 0xD; //RB5->UART1:U1RX;
     RC6PPS = 0x10;  //RC6->UART1:TX1;
-    RC5PPS = 0x0A;  //RC5->PWM1_16BIT:PWM1OUT1;
 
    /**
     IOCx registers 

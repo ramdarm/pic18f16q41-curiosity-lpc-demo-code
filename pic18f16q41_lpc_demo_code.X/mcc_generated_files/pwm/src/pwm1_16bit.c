@@ -73,15 +73,15 @@ void PWM1_16BIT_Initialize(void)
 {
      PWM1ERS = 0x0;
 
-     PWM1CLK = 0x3;
+     PWM1CLK = 0x2;
 
      PWM1LDS = 0x0;
 
-     PWM1PRL = 0x0;
+     PWM1PRL = 0x87;
 
-     PWM1PRH = 0x10;
+     PWM1PRH = 0x13;
 
-     PWM1CPRE = 0x9;
+     PWM1CPRE = 0x0;
 
      PWM1PIPOS = 0x0;
 
@@ -91,13 +91,13 @@ void PWM1_16BIT_Initialize(void)
 
      PWM1S1CFG = 0x0;
 
-     PWM1S1P1L = 0xCD;
+     PWM1S1P1L = 0xA0;
 
-     PWM1S1P1H = 0x0C;
+     PWM1S1P1H = 0xF;
 
-     PWM1S1P2L = 0x0;
+     PWM1S1P2L = 0xC4;
 
-     PWM1S1P2H = 0x08;
+     PWM1S1P2H = 0x9;
     
     //Clear PWM1_16BIT period interrupt flag
     PIR4bits.PWM1PIF = 0;
@@ -122,7 +122,7 @@ void PWM1_16BIT_Initialize(void)
     PWM1_16BIT_Slice1Output2_SetInterruptHandler(PWM1_16BIT_Slice1Output2_DefaultInterruptHandler);
     PWM1_16BIT_Period_SetInterruptHandler(PWM1_16BIT_Period_DefaultInterruptHandler);
 
-     PWM1CON = 0x0;
+     PWM1CON = 0x80;
 }
 
 void PWM1_16BIT_Enable()
