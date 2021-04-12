@@ -11,7 +11,7 @@ The following labs in this demo code project are designed for Microchip’s Curi
   - [MPLAB X IDE 5.45 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
   - [MPLAB XC8 2.31 or a newer compiler](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
   - [MPLAB Code Configurator (MCC) 4.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
-    - Melody Library v1.37.18 or newer
+    - Melody Library v1.37.22 or newer
   - [PIC18F-Q_DFP (1.9.175) or newer](https://packs.download.microchip.com/)
 
 ## Hardware Used
