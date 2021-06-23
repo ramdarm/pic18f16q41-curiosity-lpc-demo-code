@@ -13,7 +13,7 @@
   @Description
     This header file provides APIs for driver for TMR1.
     Generation Information :
-        Driver Version    :  2.11
+        Driver Version    :  3.0.0
 */
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
@@ -128,6 +128,8 @@ void Timer1_Start(void);
  * void main(void)
  * {
  *     Timer1_Initialize();
+ *     //Start timer if it is not already started
+ *     Timer1_Start();
  *     
  *     while(1)
  *     {
@@ -174,6 +176,8 @@ uint16_t Timer1_Read(void);
  * void main(void)
  * {
  *     Timer1_Initialize();
+ *     //Start timer if it is not already started
+ *     Timer1_Start();
  *     
  *     while(1)
  *     {
@@ -197,6 +201,8 @@ void Timer1_Write(size_t timerVal);
  * void main(void)
  * {
  *     Timer1_Initialize();
+ *     //Start timer if it is not already started
+ *     Timer1_Start();
  *     
  *     while(1)
  *     {
@@ -295,6 +301,8 @@ uint8_t Timer1_CheckGateValueStatus(void);
  * {
  *     Timer1_Initialize();
  *     Timer1_OverflowCallbackRegister(customOverflowCallback);
+ *     //Start timer if it is not already started
+ *     Timer1_Start();
  *
  *     while(1)
  *     {
@@ -313,6 +321,8 @@ uint8_t Timer1_CheckGateValueStatus(void);
  * void main(void)
  * {
  *     Timer1_Initialize();
+ *     //Start timer if it is not already started
+ *     Timer1_Start();
  *
  *     while(1)
  *     {
@@ -382,6 +392,6 @@ bool Timer1_HasOverflowOccured(void);
   @Example
     None
 */
-void Timer1_GATE_ISR(void);
+void Timer1_GateISR(void);
 
 #endif // TMR1_H

@@ -67,7 +67,7 @@ void PWM(void) {
     }
 
     if (labState == RUNNING) {
-        adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 4;
+        adcResult = ADCC_GetSingleConversion(POT_CHANNEL);
         //Printing ADC result on Serial port
         printf("ADC Result: %d\n\r", adcResult);
         PWM1_16BIT_SetSlice1Output1DutyCycleRegister(adcResult);

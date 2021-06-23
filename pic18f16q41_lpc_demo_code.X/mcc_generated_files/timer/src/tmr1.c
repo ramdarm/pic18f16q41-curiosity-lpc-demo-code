@@ -13,7 +13,7 @@
   @Description
     This source file provides APIs for driver for TMR1.
     Generation Information :
-        Driver Version    :  2.11
+        Driver Version    :  3.0.0
     The generated drivers are tested against the following:
         Compiler          :  XC8 v2.20
         MPLAB             :  MPLAB X v5.40
@@ -100,6 +100,7 @@ void Timer1_Initialize(void)
     PIR3bits.TMR1IF = 0;
     PIR3bits.TMR1GIF = 0;
     
+    //TMRON disabled; TRD16 disabled; nTSYNC synchronize; TCKPS 1:1; 
     T1CON = 0x0;
 }
 
@@ -184,7 +185,7 @@ bool Timer1_HasOverflowOccured(void)
     return(PIR3bits.TMR1IF);
 }
 
-void Timer1_GATE_ISR(void)
+void Timer1_GateISR(void)
 {
     // clear the TMR1 interrupt flag
     PIR3bits.TMR1GIF = 0;

@@ -67,7 +67,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
   Section: Macro Declarations
  */
 
-#define WRITE_FLASH_BLOCKSIZE    1
+#define WRITE_FLASH_BLOCKSIZE    128
 #define ERASE_FLASH_BLOCKSIZE    128
 #define END_FLASH                0x010000
 #define EEPROM_SIZE              512
