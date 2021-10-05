@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f16q41-curiosity-lpc-demo-code",
-        "version": "3.0.2",
+        "version": "4.0.0",
         "displayName": "PIC18F16Q41 Low-Pin-Count Curiosity board demo code",
         "projectName": "pic18f16q41-curiosity-lpc-demo-code",
         "shortDescription": "Demo code for LPC board for PIC18-Q41 devices",
@@ -24,7 +24,7 @@
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": ">=4.1.0"
+            "semverRange": ">=5.0.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
