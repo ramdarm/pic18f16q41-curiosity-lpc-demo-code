@@ -10,8 +10,8 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <itemPath>mcc_generated_files/adc/adcc.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="flash" displayName="flash" projectFiles="true">
-          <itemPath>mcc_generated_files/flash/flash.h</itemPath>
+        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
+          <itemPath>mcc_generated_files/nvm/nvm.h</itemPath>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/pwm1_16bit.h</itemPath>
@@ -32,8 +32,9 @@
           <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
           <itemPath>mcc_generated_files/uart/uart1.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>labs.h</itemPath>
@@ -106,9 +107,9 @@
         <logicalFolder name="docs" displayName="docs" projectFiles="true">
           <itemPath>mcc_generated_files/docs/delay.dox</itemPath>
         </logicalFolder>
-        <logicalFolder name="flash" displayName="flash" projectFiles="true">
+        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/flash/src/flash.c</itemPath>
+            <itemPath>mcc_generated_files/nvm/src/nvm.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
@@ -197,6 +198,7 @@
       </makeCustomizationType>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
+        <property key="appendMe" value=""/>
         <property key="asmlist" value="true"/>
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
@@ -227,7 +229,7 @@
         <property key="use-iar" value="false"/>
         <property key="verbose" value="false"/>
         <property key="warning-level" value="-3"/>
-        <property key="what-to-do" value="ignore"/>
+        <property key="what-to-do" value="require"/>
       </HI-TECH-COMP>
       <HI-TECH-LINK>
         <property key="additional-options-checksum" value=""/>
@@ -374,6 +376,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="memories.rww" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/C62081/Documents/GIT Repos/pic18f16q41-curiosity-lpc-demo-code/pic18f16q41_lpc_demo_code.X/debug/free/pic18f16q41_lpc_demo_code_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

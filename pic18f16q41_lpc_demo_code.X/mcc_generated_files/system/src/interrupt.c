@@ -1,17 +1,17 @@
 /**
- * Interrupt Manager Generated Driver File
+ * Interrupt Manager Generated Driver File.
  *
  * @file interrupt.c
  * 
  * @ingroup interrupt 
  * 
- * @brief This file contains the driver code for Interrupt Manager.
+ * @brief This file contains the API prototypes for the Interrupt Manager driver.
  * 
- * @version Interrupt Manager Driver Version 2.03
+ * @version Interrupt Manager Driver Version 2.0.4
 */
 
 /*
-© [2021] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -33,6 +33,7 @@
 
 #include "../../system/interrupt.h"
 #include "../../system/system.h"
+#include "../pins.h"
 
 void (*INT0_InterruptHandler)(void);
 void (*INT1_InterruptHandler)(void);
@@ -71,13 +72,18 @@ void  INTERRUPT_Initialize (void)
 
 /**
  * @ingroup interrupt
- * @brief This routine services the ISRs of enabled interrupts and is called everytime an interrupt is triggered.
- * @pre Interrupt Manager is initialized.
- * @param void
- * @return void
+ * @brief Executes whenever a high-priority interrupt is triggered. This routine checks the source of the interrupt and calls the relevant interrupt function.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
  */
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
+    // GPIO pin interrupt on Change(IOC)
+    if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
+    {
+        PIN_MANAGER_IOC();
+    }
     // interrupt handler
     if(PIE3bits.TMR0IE == 1 && PIR3bits.TMR0IF == 1)
     {

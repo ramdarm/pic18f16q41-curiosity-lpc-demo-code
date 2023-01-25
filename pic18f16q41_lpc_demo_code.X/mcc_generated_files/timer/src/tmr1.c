@@ -1,25 +1,16 @@
 /**
-  TMR1 Generated Driver File
-
-  @Company
-    Microchip Technology Inc.
-
-  @File Name
-    tmr1.c
-
-  @Summary
-    This is the generated driver implementation file for the TMR1 driver
-
-  @Description
-    This source file provides APIs for driver for TMR1.
-    Generation Information :
-        Driver Version    :  3.0.0
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 v2.20
-        MPLAB             :  MPLAB X v5.40
+  * TMR1 Generated Driver File
+  *
+  * @file tmr1.c
+  *
+  * @ingroup tmr1
+  *
+  * @brief Driver implementation for the TMR1 driver
+  *
+  * @version TMR1 Driver Version 3.1.0
 */
 /*
-© [2021] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -40,14 +31,14 @@
 */
 
 /**
-  Section: Included Files
+ * Section: Included Files
 */
 
 #include <xc.h>
 #include "../tmr1.h"
 
 /**
-  Section: Global Variables Definitions
+ * Section: Global Variables Definitions
 */
 volatile uint16_t timer1ReloadVal;
 void (*Timer1_InterruptHandler)(void);
@@ -64,7 +55,6 @@ static void (*Timer1_OverflowCallback)(void);
 static void Timer1_DefaultOverflowCallback(void);
 
 void Timer1_Initialize(void)
-
 {
     //TGGO done; TGSPM disabled; TGTM disabled; TGPOL low; TMRGE disabled; 
     T1GCON = 0x0;
@@ -74,8 +64,8 @@ void Timer1_Initialize(void)
     T1CLK = 0x1;
     //TMRH 11; 
     TMR1H = 0xB;
-    //TMRL 220; 
-    TMR1L = 0xDC;
+    //TMRL 219; 
+    TMR1L = 0xDB;
 
     // Load the TMR1 value to reload variable
     timer1ReloadVal=(uint16_t)((TMR1H << 8) | TMR1L);
@@ -143,6 +133,11 @@ void Timer1_Write(size_t timerVal)
 void Timer1_Reload(void)
 {
     Timer1_Write(timer1ReloadVal);
+}
+
+void Timer1_PeriodCountSet(size_t periodVal)
+{
+   timer1ReloadVal = (uint16_t) periodVal;
 }
 
 void Timer1_StartSinglePulseAcquisition(void)

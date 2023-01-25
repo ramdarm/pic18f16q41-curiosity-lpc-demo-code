@@ -1,26 +1,16 @@
 /**
-  ADCC Generated Driver File
-
-  @Company
-    Microchip Technology Inc.
-
-  @File Name
-    adcc.c
-
-  @Summary
-    This is the generated driver implementation file for the ADCC driver.
-
-  @Description
-    This source file provides APIs for driver for ADCC.
-    Generation Information :
-        Driver Version    :  2.1.4
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 v2.30
-        MPLAB             :  MPLABX v5.45
+ * ADCC Generated Driver File
+ * 
+ * @file adcc.c
+ * 
+ * @ingroup  adcc
+ * 
+ * @brief API Implementations for the ADCC driver.
+ *
+ * @version ADCC Driver Version 2.1.4
 */
-
 /*
-© [2021] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -47,9 +37,6 @@
 #include <xc.h>
 #include "../adcc.h"
 
-/**
-  Section: ADCC Module Variables
-*/
 
 /**
   Section: ADCC Module APIs

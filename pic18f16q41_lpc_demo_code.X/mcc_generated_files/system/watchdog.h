@@ -1,18 +1,18 @@
 
 /**
- * WWDT Generated Driver API Header File
+ * WWDT Generated Driver API Header File.
  * 
  * @file wwdt.h
  * 
  * @defgroup  wwdt WWDT
  * 
- * @brief This is the generated header file for the WWDT driver.
+ * @brief This file contains the API prototypes for the WWDT driver.
  *
  * @version WWDT Driver Version 2.0.0
 */
 
 /*
-© [2021] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -44,51 +44,50 @@
 #include <stdint.h>
 
 #define WDTCWS  7
-#define WDTCCS  16
+#define WDTCCS  -16
 #define WDTCPS  24
 
 
 
 /**
  * @ingroup wwdt
- * @brief  Initializes the WWDT to the default states configured in the MCC GUI.
- * @param none
- * @return none
+ * @brief Initializes the Windowed Watchdog Timer (WWDT) driver.
+ * @param None.
+ * @return None.
  * 
  */
 void WWDT_Initialize(void);
 
 /**
  * @ingroup wwdt
- * @brief  Enable the WWDT by setting the SEN bit
- * @param none
- * @return none
+ * @brief Enables the WWDT.
+ * @param None.
+ * @return None.
  * 
  */
 void WWDT_SoftEnable(void);
 
 /**
  * @ingroup wwdt
- * @brief  Disable the WWDT by clearing the SEN bit.
- * @param none
- * @return none
+ * @brief Disables the WWDT.
+ * @param None.
+ * @return None.
  * 
  */
 void WWDT_SoftDisable(void);
 
 /**
  * @ingroup wwdt
- * @brief   Disable the interrupt, arm the WWDT by reading back the WDTCON0 register
- *          clear the WWDT and enable the interrupt.
- * @param none
- * @return none
+ * @brief Clears the WWDT counter.
+ * @param None.
+ * @return None.
  */
 void WWDT_TimerClear(void);
 
 /**
  * @ingroup wwdt
- * @brief  Returns the status of whether the WWDT reset has occurred or not.
- * @param none
+ * @brief Checks if a reset has occurred or not.
+ * @param None.
  * @retval 0 - WWDT reset has occurred.
  * @retval 1 - WWDT reset has not occurred. 
  */
@@ -96,9 +95,8 @@ bool WWDT_TimeOutStatusGet(void);
 
 /**
  * @ingroup wwdt
- * @brief  Returns the status of, whether the WWDT window violation 
- *         reset has occurred or not.
- * @param none
+ * @brief Checks if a window violation reset has occurred or not.
+ * @param None.
  * @retval 0 - WWDT window violation reset has occurred.
  * @retval 1 - WWDT window violation reset has not occurred.
  */

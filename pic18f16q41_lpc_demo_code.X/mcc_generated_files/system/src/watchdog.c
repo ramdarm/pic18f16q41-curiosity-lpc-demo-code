@@ -1,16 +1,16 @@
 /**
- * WWDT Generated Driver File
+ * WWDT Generated Driver File.
  * 
  * @file wwdt.c
  * 
  * @ingroup  wwdt
  * 
- * @brief This is the generated driver implementation file for the WWDT driver.
+ * @brief This file contains the API implementation for the WWDT driver.
  *
  * @version WWDT Driver Version 2.0.0
 */
 /*
-© [2021] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -53,13 +53,11 @@ void WWDT_SoftDisable(void)
 
 bool WWDT_TimeOutStatusGet(void)
 {
-    // Return the status of WWDT time out reset.
     return (1);
 }
 
 bool WWDT_WindowViolationStatusGet(void)
 {
-   // Return the status of WWDT window violation reset.
     return (1);
 }  
 
