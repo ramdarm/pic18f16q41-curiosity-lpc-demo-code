@@ -44,7 +44,7 @@
 #include <stdint.h>
 
 #define WDTCWS  7
-#define WDTCCS  -16
+#define WDTCCS  16
 #define WDTCPS  24
 
 

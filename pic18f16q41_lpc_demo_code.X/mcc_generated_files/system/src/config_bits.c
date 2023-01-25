@@ -66,7 +66,7 @@
 
 //CONFIG6
 #pragma config WDTCWS = WDTCWS_7     // WDT Window Select->window always open (100%); software control; keyed access not required
-#pragma config WDTCCS =      // WDT Input Clock Selector->WDT reference clock is the 32kHz MFINTOSC output
+#pragma config WDTCCS = MFINTOSC     // WDT Input Clock Selector->WDT reference clock is the 31.25kHz MFINTOSC output
 
 //CONFIG7
 #pragma config SAFEN = OFF     // Storage Area Flash (SAF) Enable->SAF disabled

@@ -45,7 +45,7 @@
 /**
   Section: Macro Declaration
  */
-#define EEAddr    0x0000        //EEPROM starting address
+#define EEAddr EEPROM_START_ADDRESS       //EEPROM starting address
 
 
 static uint8_t adcResult;
@@ -65,16 +65,22 @@ void EEPROM(void) {
 
     if (labState == RUNNING) {
         
+        //Load the unlocking key
+        NVM_UnlockKeySet(UNLOCK_KEY);
+        
         //Get the top 4 MSBs of the ADC and write them to EEPROM
         adcResult = ADCC_GetSingleConversion(POT_CHANNEL) >> 8;
-        DATAEE_WriteByte(EEAddr, adcResult);
+        EEPROM_Write(EEAddr, adcResult);
         
         //Printing ADC result on Serial port
         printf("ADC Result: %d\n\r", ADRES);
 
         //Load whatever is in EEPROM to the LED Display
-        ledDisplay = DATAEE_ReadByte(EEAddr);
+        ledDisplay = EEPROM_Read(EEAddr);
 
+        //Clear the unlocking key
+        NVM_UnlockKeyClear();
+        
         //Determine which LEDs will light up
         LED_D4_LAT = ledDisplay & 1;
         LED_D5_LAT = (ledDisplay & 2) >> 1;
