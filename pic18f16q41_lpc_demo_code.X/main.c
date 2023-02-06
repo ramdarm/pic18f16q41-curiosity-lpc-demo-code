@@ -48,7 +48,7 @@ int main(void)
     //Disable the PWM Output (for other labs)
     PWM_Output_D7_Disable();
     
-    // Disable the pre-enabled interrupts of the MCC    
+    // Disable the pre-enabled interrupts of MCC    
     INTERRUPT_TMR0InterruptDisable();
     
     while (1) {
