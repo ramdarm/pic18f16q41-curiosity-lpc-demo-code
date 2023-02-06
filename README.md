@@ -8,14 +8,14 @@ The following labs in this demo code project are designed for Microchip’s Curi
 ![Curiosity Low Pin Count (LPC) Development Board](images/LPC-board.PNG)
 
 ## Software Used
-  - [MPLAB X IDE v5.50 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
-  - [MPLAB XC8 v2.31 or a newer compiler](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
-  - [MPLAB Code Configurator (MCC) v5.0.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
-  - [PIC18F-Q_DFP v1.11.185 or newer](https://packs.download.microchip.com/)
+  - [MPLAB X IDE v5.50 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [MPLAB XC8 v2.40 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [MPLAB Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [PIC18F-Q_DFP v1.15.360 or newer](https://packs.download.microchip.com/)
 
 ## Hardware Used
-  - [PIC18F16Q41 Microcontroller](https://www.microchip.com/wwwproducts/en/PIC18F16Q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
-  - [Curiosity Low Pin Count (LPC) Development Board - Rev 4](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)  
+  - [PIC18F16Q41 Microcontroller](https://www.microchip.com/en-us/product/PIC18F16Q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)
+  - [Curiosity Low Pin Count (LPC) Development Board - Rev 4](https://www.microchip.com/en-us/development-tool/DM164137?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_lpc_demo_lab_github)  
 
 ## LABS
 The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply pressing the S1 button on the board.
