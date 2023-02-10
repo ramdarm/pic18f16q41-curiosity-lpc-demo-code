@@ -33,7 +33,7 @@ The labs in this project are presented in the same order as they appear on the p
 
 ## INPUTS AND DISPLAY
 • Push Button Switch – Only one on-board push button switch S1 is utilized. S1 is connected to the PIC MCU’s RC4 pin and is used to switch to the next lab. <br />
-• Potentiometer – A 10kΩ potentiometer connected to the RC0 pin is used in labs requiring analog inputs. <br />
+• Potentiometer – A 10 kΩ potentiometer connected to the RC0 pin is used in labs requiring analog inputs. <br />
 • LEDs - The Curiosity LPC Development Board has four LEDs (D4 through D7) that are connected to I/O ports RA5, RA1, RA2 and RC5, respectively. These LEDs are used to display the output of the different labs. <br/>
 
 ### <u>Lab 1: Hello World</u>
@@ -44,7 +44,7 @@ This lab shows how to turn on an LED.
 LED D4 will light up and stay lit.
 
 #### Summary
-The LEDs are connected to the input-output (I/O) pins. First, the I/O pin must be configured to be an output. In this case, when one of these pins is driven high (LED_D4 = 1), the LED will turn on. These two logic levels are derived from the power pins of the PIC MCU. Since the PIC's power pin (VDD) is connected to 5V or 3.3V and the source (VSS) to ground (0V), a logic level of ‘1’ is equivalent to 5V or 3.3V, and a logic level of ‘0’ is 0V.
+The LEDs are connected to the input-output (I/O) pins. First, the I/O pin must be configured to be an output. In this case, when one of these pins is driven high (LED_D4 = 1), the LED will turn on. These two logic levels are derived from the power pins of the PIC MCU. Since the PIC's power pin (V<sub>DD</sub>) is connected to 5V or 3.3V and the source (V<sub>SS</sub>) to ground (0V), a logic level of ‘1’ is equivalent to 5V or 3.3V, and a logic level of ‘0’ is 0V.
 
 
 ### <u>Lab 2: Blink</u>
@@ -66,14 +66,14 @@ This lab is built on Lab 1 and 2, which showed how to light up a LED and then ma
 LEDs D4, D5, D6 and D7 light up in turn every 500 milliseconds. Once D7 is lit, D4 lights up and the pattern repeats.
 
 #### Summary
-In C, we use Binary Left Shift and Right Shift Operators (<< and >>, respectively) to move bits around in the registers. The shift operations are 9-bit operations involving the 8-bit register being manipulated and the Carry bit in the STATUS register as the ninth bit. With the rotate instructions, the register contents are rotated through the Carry bit. <br />
+In C, Binary Left Shift and Right Shift Operators (<< and >>, respectively) to move bits around in the registers. The shift operations are 9-bit operations involving the 8-bit register being manipulated and the Carry bit in the STATUS register as the ninth bit. With the rotate instructions, the register contents are rotated through the Carry bit. <br />
 
-For example, for a certain register rotateReg, we want to push a ‘1’ into the LSB of the register and have the rest of the bits shift to the left, we can use the Binary Left Shift Operator (<<). We would first have to set up the Carry bit with the value that we want to push into the register before we execute shift instruction, as seen in the figure below.
+For example, for a certain register rotateReg, the Binary Left Shift Operator (<<) can be used to push a ‘1’ into the LSB of the register and have the rest of the bits shift to the left. For this, it is required to set up the Carry bit with the value that is pushed into the register before executing the shift instruction, as seen in the figure below.
 
 ###### Left Shift Binary Operation
 ![Lab3-left-shift-binary-operation](images/Lab3-left-shift-binary-operation.PNG)
 
-Similarly, if we want to push a ‘1’ into the MSB of the register and have the rest of the bits shift to the right, we can use the Binary Right Shift Operator (>>). We would first have to set up the Carry bit with the value that we want to push into the register before we execute shift instruction, as seen in  the figure below.
+Similarly, using the Binary Right Shift Operator (>>) pushes a ‘1’ into the MSB of the register and makes the rest of the bits shift to the right. For this, it's required to set up the Carry bit with the value that is going to be placed into the register before executing the shift instruction, as seen in the figure below.
 
 ###### Right Shift Binary Operation
 ![Lab3-right-shift-binary-operation](images/Lab3-right-shift-binary-operation.PNG)
